@@ -1,17 +1,18 @@
-# windows-ssh-server
+# win-sshd-install
 
 Install OpenSSH on Windows in **seconds** using the [Win32-OpenSSH MSI](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH-Using-MSI), instead of **Optional Features / DISM** (often 15–20+ minutes).
 
-This repo holds a pinned manifest (`config/openssh.json`), optional offline MSIs (`packages/`), and a PowerShell installer that downloads from **your repo first** (if configured), then upstream GitHub.
+This repo holds a pinned manifest (`config/openssh.json`), vendored MSIs/ZIPs (`packages/`), and a PowerShell installer that uses local packages first, then optional `repoBaseUrl`, then upstream GitHub.
 
 ## Quick start (on the Windows machine)
 
-1. Clone or copy this repo to the server.
+1. Clone this repo to the server (or download a ZIP from [GitHub](https://github.com/fhlip0/win-sshd-install)).
 2. Open **PowerShell as Administrator**.
 3. Run:
 
 ```powershell
-cd C:\path\to\windows-ssh-server
+git clone https://github.com/fhlip0/win-sshd-install.git
+cd win-sshd-install
 Set-ExecutionPolicy -Scope Process Bypass
 .\Install-OpenSSH-Server.ps1
 ```
@@ -49,7 +50,7 @@ SHA256 from the manifest is verified after download.
 4. Set `repoBaseUrl` in `config/openssh.json`, for example:
 
 ```json
-"repoBaseUrl": "https://github.com/YOUR_USER/windows-ssh-server/releases/download/v1.0.0"
+"repoBaseUrl": "https://github.com/fhlip0/win-sshd-install/releases/download/v1.0.0"
 ```
 
 Clients then pull MSIs from your release URL before hitting GitHub.
