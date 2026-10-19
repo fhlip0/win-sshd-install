@@ -1,0 +1,22 @@
+{
+  "version": "10.0.0.0",
+  "releaseTag": "10.0.0.0p2-Preview",
+  "upstreamBaseUrl": "https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview",
+  "repoBaseUrl": "",
+  "packages": {
+    "ARM64": {
+      "fileName": "OpenSSH-ARM64-v10.0.0.0.msi",
+      "sha256": "7a17d0e22d004fb47ca4bfd8fef926fa305de4ebf70a6f3c7a29c39aabef0023"
+    },
+    "x86": {
+      "fileName": "OpenSSH-Win32-v10.0.0.0.msi",
+      "sha256": "da3791ec28d1ab480466cf45b9983a747f8f046c86f4ffb99d9f7a6055982c04"
+    },
+    "AMD64": {
+      "fileName": "OpenSSH-Win64-v10.0.0.0.msi",
+      "sha256": "ddec9c53864280759cf9f74791cefd387100e3946aa849a1c138a4ed1b96b7d9",
+      "zipFileName": "OpenSSH-Win64.zip",
+      "zipSha256": "23f50f3458c4c5d0b12217c6a5ddfde0137210a30fa870e98b29827f7b43aba5"
+    }
+  }
+}
